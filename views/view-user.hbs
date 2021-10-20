@@ -1,0 +1,52 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View User</li>
+    </ol>
+</nav>
+
+<div class="container">
+    {{#each rows}}
+    <div class="card mb-3">
+        <h1 class=" text-center pt-4">{{first_name}} {{last_name}}</h1>
+        <hr>
+        <div class="card-body">
+            <fieldset disabled>
+                <label for="inputPassword6" class="col-form-label fw-bold">First Name</label>
+                <div class="mb-3">
+                    <input type="text" id="disabledTextInput" class="form-control" value="{{first_name}}">
+                </div>
+
+                <label class="col-form-label fw-bold">Last Name</label>
+                <div class="mb-3">
+                    <input type="text" id="disabledTextInput" class="form-control" value="{{last_name}}">
+                </div>
+
+                <label class="col-form-label fw-bold">Full Name</label>
+                <div class="mb-3">
+                    <input type="text" id="disabledTextInput" class="form-control" value="{{first_name}} {{last_name}}">
+                </div>
+
+                <label class="col-form-label fw-bold">Email</label>
+                <div class="mb-3">
+                    <input type="text" id="disabledTextInput" class="form-control" value="{{email}}">
+                </div>
+
+                <label class="col-form-label fw-bold">Phone</label>
+                <div class="mb-3">
+                    <input type="text" id="disabledTextInput" class="form-control" value="{{phone}}">
+                </div>
+
+                <label class="col-form-label fw-bold">Comments</label>
+                <div class="mb-3">
+                    <textarea type="text" class="form-control">{{comments}}</textarea>
+                </div>
+
+                <label class="col-form-label fw-bold">Status</label>
+                <div class="mb-3">
+                    <input type="text" id="disabledTextInput" class="form-control" value="{{status}}">
+                </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
